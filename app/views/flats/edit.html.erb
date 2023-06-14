@@ -1,0 +1,15 @@
+<div class="container">
+  <br>
+  <h1>Edit flat</h1>
+  <hr>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-success">
+      <%= msg %>
+    </div>
+  <% end %>
+  <%= render "form", flat: @flat %>
+  <hr>
+  <div  class="btn btn-dark" >
+    <%= link_to "Back to flats list", flats_path %>
+  </div>
+</div>

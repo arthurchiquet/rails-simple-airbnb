@@ -1,0 +1,27 @@
+<div class="map" style="background-image: url(<%= @flat.picture_url %>)"></div>
+<div class="container">
+  <br>
+  <h1><%= @flat.name %></h1>
+  <p><%= @flat.address %></p>
+  <hr>
+  <% flash.each do |type, msg| %>
+    <div class="alert alert-success">
+      <%= msg %>
+    </div>
+  <% end %>
+  <h3>Description</h3>
+  <p><%= @flat.description %></p>
+  <hr>
+  <h3>Details</h3>
+  <div class="d-flex align-items-center">
+    <i class="fa-solid fa-people-line ms-3"></i>
+    <p class="mb-0"><%= @flat.number_of_guests %></p>
+    <i class="fa-solid fa-euro-sign ms-3"></i>
+    <p class="mb-0"><%= @flat.price_per_night %></p>
+  </div>
+  <hr>
+  <div  class="btn btn-dark" >
+    <%= link_to "Back to flats list", flats_path %>
+  </div>
+</div>
+

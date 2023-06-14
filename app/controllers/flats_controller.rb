@@ -3,7 +3,12 @@ class FlatsController < ApplicationController
   add_flash_types :info, :error, :success
 
   def index
-    @flats = Flat.all
+    if params[:query].present?
+      @query = params[:query]
+      @flats = Flat.where("name LIKE ?", "%#{params[:query]}%")
+    else
+      @flats = Flat.all
+    end
   end
 
   def show

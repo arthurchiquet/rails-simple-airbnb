@@ -26,9 +26,3 @@ img {
 .card-title {
   min-height: 60px
 }
-
-.btn {
-  min-width:100px;
-  margin-left: 1px;
-  margin-right: 1px;
-}
